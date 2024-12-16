@@ -225,7 +225,7 @@ const ProductDetails = () => {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`http://localhost:5000/book/${id}`)
+        fetch(`https://be-bookstoreshop.onrender.com/book/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setBook(data);
@@ -301,7 +301,7 @@ const ProductDetails = () => {
                     email: user.email
                 }
 
-                axios.post('http://localhost:5000/carts', cartItem)
+                axios.post('https://be-bookstoreshop.onrender.com/carts', cartItem)
                     .then((response) => {
                         console.log(response);
                         if (response.data) {

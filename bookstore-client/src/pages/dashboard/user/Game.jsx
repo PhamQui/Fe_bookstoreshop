@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { AuthContext } from "../../../contexts/AuthProvider";
-const socket = io("http://localhost:5000");
+const socket = io("https://be-bookstoreshop.onrender.com");
     socket.on("connect", () => {
         console.log("Connected to WebSocket:", socket.id);
     });

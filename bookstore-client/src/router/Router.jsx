@@ -120,7 +120,7 @@ const router = createBrowserRouter([
       {
         path: 'update-book/:id',
         element: <UpdateBook />,
-        loader: ({ params }) => fetch(`http://localhost:5000/book/${params.id}`)
+        loader: ({ params }) => fetch(`https://be-bookstoreshop.onrender.com/book/${params.id}`)
       },
       {
         path: 'orders',

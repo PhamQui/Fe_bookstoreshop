@@ -44,7 +44,7 @@ const RelatedBook = ({ category }) => {
 
         const fetchRelatedBooks = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/book?${queryString}`);
+                const response = await axios.get(`https://be-bookstoreshop.onrender.com/book?${queryString}`);
                 const filteredBooks = response.data.filter(book => book._id !== id); // Loại bỏ sách hiện tại
                 setRelatedBooks(filteredBooks);
             } catch (error) {

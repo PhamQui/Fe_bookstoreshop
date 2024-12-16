@@ -39,7 +39,7 @@ const CartPage = () => {
     if (product.quantity > item.quantity)
     {
       try {
-        const response = await fetch(`http://localhost:5000/carts/${item._id}`, {
+        const response = await fetch(`https://be-bookstoreshop.onrender.com/carts/${item._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const CartPage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/users/info?email=${user.email}`, {
+      const response = await fetch(`https://be-bookstoreshop.onrender.com/users/info?email=${user.email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ const CartPage = () => {
     if (item.quantity > 1) {
       try {
         const response = await fetch(
-          `http://localhost:5000/carts/${item._id}`,
+          `https://be-bookstoreshop.onrender.com/carts/${item._id}`,
           {
             method: "PUT",
             headers: {
@@ -149,7 +149,7 @@ const CartPage = () => {
       cancelButtonText: "Hủy"
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/carts/${item._id}`).then(response => {
+        axios.delete(`https://be-bookstoreshop.onrender.com/carts/${item._id}`).then(response => {
           if (response) {
             refetch();
             Swal.fire("Đã xóa!", "Sách đã xóa khỏi giỏ hàng thành công! ", "success");

@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/create_payment_url': {
-        target: 'http://localhost:5000', // Địa chỉ backend của bạn
+        target: 'https://be-bookstoreshop.onrender.com', // Địa chỉ backend của bạn
         changeOrigin: true,
         secure: false,
       },

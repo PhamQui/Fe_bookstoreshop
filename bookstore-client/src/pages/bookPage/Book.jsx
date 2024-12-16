@@ -26,7 +26,7 @@ const Book = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/book");
+        const response = await fetch("https://be-bookstoreshop.onrender.com/book");
         const data = await response.json();
         setBook(data);
   
