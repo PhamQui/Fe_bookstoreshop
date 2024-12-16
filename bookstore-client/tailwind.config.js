@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import daisyui from "daisyui";
+
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -16,7 +18,7 @@ module.exports = {
         "light-purple": "#9999FF",
         "light-purple-200": "#CCCCFF",
         "light-pink": "#FF99CC",
-        pink:"#FF6699",
+        pink: "#FF6699",
         cl1: "#FFC7BA",
         cl2: "#FB9EC4",
         cl3: "#A2DCEE",
@@ -24,5 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
 };
